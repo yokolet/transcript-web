@@ -1,4 +1,10 @@
 import graphene
+import os
+import sys
+sys.path.append(os.path.join(os.path.dirname(__file__), '..', 'eng_to_kana'))
+from eng_to_kana import EngToKana
+
+etk = EngToKana()
 
 class Transcription(graphene.ObjectType):
     english = graphene.String()
@@ -15,13 +21,13 @@ class Query(graphene.ObjectType):
     def resolve_transcript(self, info, word):
         return {
             "english": word,
-            "katakana": ["カタカナ"]
+            "katakana": etk.transcript(word)
         }
 
     def resolve_transcripts(self, info, words):
         return {
             "english": words,
-            "katakana": [["カタカナ"], ["イングィッシュ", "イングリッシュ"]]
+            "katakana": etk.fromWordList(words)
         }
 
 schema = graphene.Schema(query=Query)
