@@ -1,7 +1,7 @@
 # English to Katakana Transcription GraphQL Endpoint
 
 This repository is for a GraphQL Endpoint to add a web feature to
-(https://github.com/yokolet/transcript)[https://github.com/yokolet/transcript].
+[https://github.com/yokolet/transcript](https://github.com/yokolet/transcript).
 For a deployment purpose, this repository contains main logic of the transcript repo.
 However, the transcription itself is being developed in the other repository.
 
@@ -43,7 +43,6 @@ query {
 
 The app is live at:
 
-(https://agile-plateau-86972.herokuapp.com/graphql)[https://agile-plateau-86972.herokuapp.com/graphql]
+[https://agile-plateau-86972.herokuapp.com/graphql](https://agile-plateau-86972.herokuapp.com/graphql)
 
-
-Use GraphQL client such as (Insomnia)[https://insomnia.rest/graphql/] or other and make a query.
+Use GraphQL client such as [Insomnia](https://insomnia.rest/graphql/) or other and make a query.
