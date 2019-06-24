@@ -1,16 +1,15 @@
 # English to Katakana Transcription GraphQL Endpoint
 
-This repository is a GraphQL Endpoint for an Englih to Katakana Transcription developed
+This repository is a GraphQL Endpoint for an English to Katakana Transcription, which is developed
 in another repository,
 [https://github.com/yokolet/transcript](https://github.com/yokolet/transcript).
-For a deployment purpose, this repository contains a logic of the English to Katakana
+For a deployment purpose, this repository contains a logic of the
 transcription. However, the transcription itself is being developed in the other repository.
-For details about transcription itslef, see [transcript](https://github.com/yokolet/transcript) repo.
+For details about how the transcription is made, see [transcript](https://github.com/yokolet/transcript) repo.
 
 
-The transcription finds a way to read English words in Japanese style.
-The goal is to generate so-called Japanese English sound. If the Katakana sounds natrual as Japanese, the result is considered good. It is off from a native speaker-ish pronounciation,
-and not for English study.
+A brief summary of the transcription is a way to read English words in Japanese style.
+The goal is to generate so-called Japanese English sound. If the Katakana sounds natrual as Japanese, the result is considered good. From this purpose, the result is off from a native speaker-ish cool pronounciation. This transcription is not for English study.
 
 
 ## GraphQL
@@ -53,6 +52,23 @@ query {
 
 - E_KEY: the error occured while processing.
 
+
+## How to Run
+
+- Installation
+
+```bash
+$ pip install -r requirements.txt
+```
+
+- Start the server
+
+This app is designed to work on Heroku. `flask run` may work, but the command below
+is used to start the server.
+
+```bash
+$ heroku local web
+```
 
 ## URL
 
