@@ -12,7 +12,7 @@ CORS(app)
 
 @app.route('/')
 def hello_world():
-    return 'Hello, World!'
+    return 'Hello, Transcript! Try /graphql using GraphQL client.'
 
 if __name__ == "__main__":
     app.run()

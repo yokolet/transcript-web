@@ -1,9 +1,11 @@
 import graphene
+from graphql import GraphQLError
 import os
 import sys
 sys.path.append(os.path.join(os.path.dirname(__file__), '..', 'eng_to_kana'))
 from eng_to_kana import EngToKana
 
+MAXLEN = 1000
 etk = EngToKana()
 
 class Transcription(graphene.ObjectType):
@@ -25,6 +27,8 @@ class Query(graphene.ObjectType):
         }
 
     def resolve_transcripts(self, info, words):
+        if len(words) > MAXLEN:
+            raise GraphQLError('Too many words!')
         return {
             "english": words,
             "katakana": etk.fromWordList(words)
